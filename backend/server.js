@@ -18,10 +18,14 @@ app.use(express.json()); // For JSON data
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: true })); // For form data
 // add frontend to backend
-app.use(cors ({
+app.use(cors({
     // http://localhost:5173
-    origin:"https://blog-yt-wau1.onrender.com",
-    credentials:true,
+    // origin:"https://blog-yt-wau1.onrender.com",
+    origin: [
+        "http://localhost:5173",
+        "https://blog-yt-wau1.onrender.com"
+    ],
+    credentials: true,
 }));
 
 // deploy part
