@@ -33,7 +33,7 @@ const Signup = () => {
     
     // add frontend and backend
     try {
-      const res = await axios.post('https://blog-yt-wau1.onrender.com//user/register', user, {
+      const res = await axios.post('https://blog-yt-wau1.onrender.com/api/v1/user/register', user, {
         headers: {
           "Content-Type":"application/json"
         },
