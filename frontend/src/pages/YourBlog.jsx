@@ -86,7 +86,7 @@ const YourBlog = () => {
 
   const getOwnBlog = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/blog/get-own-blogs`, { withCredentials: true })
+      const res = await axios.get(`https://blog-yt-wau1.onrender.com//blog/get-own-blogs`, { withCredentials: true })
       dispatch(setBlog(res.data.blogs))
     } catch (error) {
       console.log(error);
@@ -96,7 +96,7 @@ const YourBlog = () => {
   const deleteBlog = async (id) => {
     console.log("Delete clicked", id);
     try {
-      const res = await axios.delete(`http://localhost:8000/api/v1/blog/delete/${id}`, {withCredentials:true})
+      const res = await axios.delete(`https://blog-yt-wau1.onrender.com//blog/delete/${id}`, {withCredentials:true})
       if(res.data.success){
         const updatedblogData = blog.filter((blogItem) => blogItem?._id !== id)
         dispatch(setBlog(updatedblogData))

@@ -31,7 +31,7 @@ const CommentBox = ({ selectedBlog }) => {
 
     const commentHandler = async () => {
         try {
-            const res = await axios.post(`http://localhost:8000/api/v1/blog/${selectedBlog._id}/create`, { content }, {
+            const res = await axios.post(`https://blog-yt-wau1.onrender.com//blog/${selectedBlog._id}/create`, { content }, {
                 headers: {
                     "Content-Type": "application/json"
                 }, withCredentials: true
@@ -62,7 +62,7 @@ const CommentBox = ({ selectedBlog }) => {
     useEffect(() => {
         const getAllcommentsOfBlog = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/v1/blog/${selectedBlog._id}/comment/all`)
+                const res = await axios.get(`https://blog-yt-wau1.onrender.com//blog/${selectedBlog._id}/comment/all`)
                 const data = res.data.comments
                 dispatch(setComment(data))
             } catch (error) {

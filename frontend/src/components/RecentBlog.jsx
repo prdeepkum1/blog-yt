@@ -17,7 +17,7 @@ const RecentBlog = () => {
     useEffect(()=>{
         const getAllPublishedBlogs = async() => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/v1/blog/get-published-blogs`,
+                const res = await axios.get(`https://blog-yt-wau1.onrender.com//blog/get-published-blogs`,
                     {withCredentials:true})
 
                     //  console.log(res.data)

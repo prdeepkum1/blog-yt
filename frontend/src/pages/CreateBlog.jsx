@@ -45,7 +45,7 @@ const CreateBlog = () => {
     try {
       // connected frontend to backend
       dispatch(setLoading(true))
-      const res = await axios.post(`http://localhost:8000/api/v1/blog/`,{title, category},{
+      const res = await axios.post(`https://blog-yt-wau1.onrender.com//blog/`,{title, category},{
         headers:{
           "Content-Type":"application/json"
         },
